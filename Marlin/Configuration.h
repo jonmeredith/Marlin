@@ -1843,6 +1843,7 @@
                                   // This LCD is known to be susceptible to electrical interference
                                   // which scrambles the display.  Pressing any button clears it up.
                                   // This is a LCD2004 display with 5 analog buttons.
+#define ADC_KEYPAD
 
 //
 // Generic 16x2, 16x4, 20x2, or 20x4 character-based LCD.
