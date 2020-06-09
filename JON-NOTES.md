@@ -13,3 +13,17 @@ Mostly to stop the annoying status messages in OctoPrint
 
 RAM:   [==        ]  18.0% (used 2947 bytes from 16384 bytes)
 Flash: [=======   ]  70.8% (used 92014 bytes from 130048 bytes)
+
+# Enabled the control buttons
+
+Defined ADC_KEYPAD - found J3 / LCD pinouts in the anet pinout header
+
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  18.0% (used 2947 bytes from 16384 bytes)
+Flash: [=======   ]  70.8% (used 92014 bytes from 130048 bytes)
+
+
+# Resetting home position
+
+M206 X-6 Y8  seemed good
+can save with M500, load with M501 and reset with M502
