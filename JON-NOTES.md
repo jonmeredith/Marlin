@@ -156,3 +156,10 @@ Setting temporarily and retrying case print
 
 M301 P40.95 I3.94 D106.50
 M304 P269.41 I53.04 D912.21
+
+
+Underlying flash looks like
+
+avrdude -p atmega1284p -C /Users/jmeredith/.platformio/packages/tool-avrdude/avrdude.conf -c arduino -b 115200 -D -P /dev/cu.usbserial-1410 -U flash:w:.pio/build/sanguino1284p/firmware.hex:i
+
+
