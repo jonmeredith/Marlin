@@ -1170,7 +1170,7 @@
   // Enable this option and set to HIGH if your SD cards are incorrectly detected.
   #define SD_DETECT_STATE LOW
 
-  //#define SDCARD_READONLY                 // Read-only SD card (to save over 2K of flash)
+  #define SDCARD_READONLY                 // Read-only SD card (to save over 2K of flash)
 
   #define SD_PROCEDURE_DEPTH 1              // Increase if you need more nested M32 calls
 
@@ -1670,12 +1670,19 @@
  * Override if the automatically selected points are inadequate.
  */
 #if EITHER(AUTO_BED_LEVELING_3POINT, AUTO_BED_LEVELING_UBL)
+  // #define PROBE_PT_1_X 20
+  // #define PROBE_PT_1_Y 160
+  // #define PROBE_PT_2_X 20
+  // #define PROBE_PT_2_Y 10
+  // #define PROBE_PT_3_X 180
+  // #define PROBE_PT_3_Y 10
+
   #define PROBE_PT_1_X 20
-  #define PROBE_PT_1_Y 160
+  #define PROBE_PT_1_Y 150
   #define PROBE_PT_2_X 20
-  #define PROBE_PT_2_Y 10
+  #define PROBE_PT_2_Y 80
   #define PROBE_PT_3_X 180
-  #define PROBE_PT_3_Y 10
+  #define PROBE_PT_3_Y 80
 #endif
 
 /**

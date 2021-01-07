@@ -671,7 +671,15 @@ float Probe::probe_at_point(const float &rx, const float &ry, const ProbePtRaise
   xyz_pos_t npos = { rx, ry };
   if (probe_relative) {                                     // The given position is in terms of the probe
     if (!can_reach(npos)) {
-      if (DEBUGGING(LEVELING)) DEBUG_ECHOLNPGM("Position Not Reachable");
+      if (DEBUGGING(LEVELING)) {
+        DEBUG_ECHOLNPGM("Position Not Reachable");
+        DEBUG_ECHOPAIR("rx=", rx);
+        DEBUG_ECHOPAIR("ry=", ry);
+        DEBUG_ECHOPAIR("min_x=", min_x());
+        DEBUG_ECHOPAIR("max_x=", max_x());
+        DEBUG_ECHOPAIR("min_y=", min_y());
+        DEBUG_ECHOPAIR("max_y=", max_y());
+      }      
       return NAN;
     }
     npos -= offset_xy;                                      // Get the nozzle position
